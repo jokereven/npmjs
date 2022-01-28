@@ -1,0 +1,31 @@
+app:
+  name: '<%= packageName %>'
+  mode: 'debug'
+  host: 'localhost'
+  version: 'v0.0.1'
+  port: <%= port %>
+  start_time: '2022-1-25'
+  machine_id: 1
+
+log:
+  level: 'debug'
+  file_name: '<%= packageName %>.log'
+  max_size: 200
+  max_age: 30
+  max_backups: 7
+
+mysql:
+  host: 'localhost'
+  port: 3306
+  user: 'root'
+  password: 'root'
+  db_name: 'zjing'
+  max_open_conns: 200
+  max_idle_conns: 20
+
+redis:
+  host: 'localhost'
+  port: 6379
+  db: 0
+  password: ''
+  pool_size: 100

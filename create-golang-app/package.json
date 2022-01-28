@@ -1,0 +1,20 @@
+{
+  "name": "create-golang-app",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "create-golang-app": "./index.js"
+  },
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "inquirer": "^8.2.0"
+  }
+}

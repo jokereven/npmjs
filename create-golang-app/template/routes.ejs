@@ -1,0 +1,41 @@
+package routes
+
+import (
+	"net/http"
+
+	"github.com/gin-gonic/gin"
+	"<%= packageName %>/logger"
+	"github.com/spf13/viper"
+)
+
+// Setup ...
+func Setup(mode string) *gin.Engine {
+	// using code:  gin.SetMode(gin.ReleaseMode)
+	gin.SetMode(mode)
+
+	r := gin.New()
+
+	// use logger and recover middleware
+	r.Use(logger.GinLogger(), logger.GinRecovery(true))
+
+	// get the / and show the app massage
+	r.GET("/", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"msg":        "welcome to" + " " + viper.GetString("app.name"),
+			"mode":       viper.GetString("app.mode"),
+			"version":    viper.GetString("app.version"),
+			"machine_id": viper.GetInt("app.machine_id"),
+			"port":       viper.GetString("app.port"),
+			"start_time": viper.GetString("app.start_time"),
+		})
+	})
+
+	// adds handlers for NoRoute
+	r.NoRoute(func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"msg":  "404 Not Found",
+			"hint": "you have get the no route path",
+		})
+	})
+	return r
+}
