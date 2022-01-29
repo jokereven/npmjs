@@ -1,7 +1,7 @@
 {
   "name": "create-golang-app",
-  "version": "1.0.2",
-  "description": "",
+  "version": "1.0.3",
+  "description": "this is a cli to create a Go web template",
   "main": "index.js",
   "type": "module",
   "bin": {
@@ -10,8 +10,18 @@
   "scripts": {
     "test": "node index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "golang",
+    "web",
+    "template",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jokereven/npmjs.git"
+  },
+  "homepage": "https://github.com/jokereven/npmjs/blob/master/create-golang-app/README.md",
+  "author": "jokereven",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.6",
