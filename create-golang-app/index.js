@@ -3,6 +3,7 @@
 
 import fs from 'fs';
 import issue from './issue/index.js';
+import create_air_conf_example_template from './utils/create_air_conf_example_template.js';
 import create_config_yaml_template from './utils/create_config_yaml_template.js';
 import create_cors_template from './utils/create_cors_template.js';
 import create_go_mod_template from './utils/create_go_mod_template.js';
@@ -13,7 +14,6 @@ import create_rate_template from './utils/create_rate_template.js';
 import create_redis_template from './utils/create_redis_template.js';
 import create_route_template from './utils/create_route_template.js';
 import create_setting_template from './utils/create_setting_template.js';
-import create_air_conf_example_template from './utils/create_air_conf_example_template.js'
 
 const answer = await issue();
 console.log(answer);
@@ -115,20 +115,6 @@ fs.writeFileSync(
 	`${GetRootPath()}/sql/init.sql`,
 	`create database if not exists zjing;`
 );
-
-// static
-fs.mkdirSync(`${GetRootPath()}/static/`);
-
-// 复制图片
-var pic = fs.readdirSync('./static/'); // 需要复制的图片
-
-pic.forEach(item => {
-	var readStream = fs.createReadStream('./static/' + item); // 被复制文件
-	// 创建一个写入流
-	var writeStream = fs.createWriteStream(`${GetRootPath()}/static/` + item); // 复制到的目标位置及文件
-	// 读取流的内容通过管道流写入到输出流
-	readStream.pipe(writeStream);
-});
 
 // .gitignore
 fs.writeFileSync(
