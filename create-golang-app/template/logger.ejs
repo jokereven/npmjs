@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"<%= packageName %>/settings"
+	"<%= packageName %>/setting"
 	"github.com/natefinch/lumberjack"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
@@ -19,7 +19,7 @@ import (
 
 // Init ... 初始化logger
 // 使用zap管理logger
-func Init(cfg *settings.LogConfig, mode string) (err error) {
+func Init(cfg *setting.LogConfig, mode string) (err error) {
 	writeSyncer := getLogWriter(
 		cfg.Filename,
 		cfg.MaxSize,
