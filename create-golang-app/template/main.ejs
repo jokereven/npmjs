@@ -11,11 +11,11 @@ import (
 	"syscall"
 	"time"
 
-	"<%= packageName %>/dao/mysql"
-	"<%= packageName %>/dao/redis"
-	"<%= packageName %>/logger"
-	"<%= packageName %>/route"
-	"<%= packageName %>/setting"
+	"github.com/<%= github %>/<%= packageName %>/dao/mysql"
+	"github.com/<%= github %>/<%= packageName %>/dao/redis"
+	"github.com/<%= github %>/<%= packageName %>/logger"
+	"github.com/<%= github %>/<%= packageName %>/route"
+	"github.com/<%= github %>/<%= packageName %>/setting"
 
 	"github.com/spf13/viper"
 	"go.uber.org/zap"
@@ -25,11 +25,11 @@ func main() {
 	// 执行命令行
 
 	// 1. 通过os.Args 执行命令行
-	// if len(os.Args) < 2 {
-	// 	fmt.Println("need set config file such: zjing.exe ./conf/config.yaml")
-	// 	return
-	// }
-
+	/* 	if len(os.Args) < 2 {
+		fmt.Println("need set config file such: zjing.exe ./conf/config.yaml")
+		return
+	} */
+	
 	// 2. 通过flag 执行命令行
 	var filepath string
 	func() {

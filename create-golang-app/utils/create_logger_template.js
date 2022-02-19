@@ -11,7 +11,7 @@ export default config => {
 	const snippet = ejs.render(templateSnippet.toString(), {
 		packageName: config.packageName,
 		port: config.port,
+		github: config.github,
 	});
-
 	return snippet;
 };

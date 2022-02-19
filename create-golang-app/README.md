@@ -65,7 +65,22 @@ cnpm i create-golang-app -g
 使用 create-golang-app 创建 Go Web项目
 ```
 
+![image-20220219134639893](https://qiniuyun.code520.com.cn/images/20220219134639.png)
+
 ![create-golang-app](https://camo.githubusercontent.com/ca3d16b730f9c6c7a297f6dc9ec3db97db913e8e3de0c6adc1f5fec7ef74a8ab/68747470733a2f2f71696e697579756e2e636f64653532302e636f6d2e636e2f696d616765732f32303232303132373132303234362e676966)
+
+#### 版本说明
+
+```
+v0.0.1 基础架构...
+v1.0.1 微调优化代码...
+v1.0.2 微调添加配置说明...
+v1.0.3 微调...
+v1.0.4 添加air对代码进行优化...
+v1.0.5 添加初始化时github参数.
+```
+
+
 
 #### 关于配置
 

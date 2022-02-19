@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// 上一行作用：使用env来找到node，并使用node来作为程序的解释程序
+// 上一行作用: 使用env来找到node, 并使用node来作为程序的解释程序
 
 import fs from 'fs';
 import issue from './issue/index.js';
@@ -14,7 +14,6 @@ import create_rate_template from './utils/create_rate_template.js';
 import create_redis_template from './utils/create_redis_template.js';
 import create_route_template from './utils/create_route_template.js';
 import create_setting_template from './utils/create_setting_template.js';
-
 const answer = await issue();
 console.log(answer);
 
@@ -22,6 +21,7 @@ console.log(answer);
 const inputConfig = {
 	packageName: answer.packageName,
 	port: answer.port,
+	github: answer.github,
 };
 
 // 创建项目文件夹
