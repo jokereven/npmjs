@@ -17,9 +17,14 @@ func Setup(mode string) *gin.Engine {
 
 	r := gin.New()
 
-	// use logger, recover, cors and rate middleware
-	r.Use(logger.GinLogger(), logger.GinRecovery(true), middleware.Cors(), middleware.RateLimitMiddleware(
-	time.Second*1, 1))
+	// logger, recover, cors and ratelimite middleware
+	r.Use(logger.GinLogger(), logger.GinRecovery(true))
+
+	v1 := r.Group("/api/v1")
+	{
+		// Beta cors and rate middleware
+		v1.GET("/middleware", middleware.CorsMiddleware(), middleware.RateLimitMiddleware(time.Second*1, 1))
+	}
 
 	// get the / and show the app massage
 	r.GET("/", func(c *gin.Context) {
@@ -37,7 +42,7 @@ func Setup(mode string) *gin.Engine {
 	r.NoRoute(func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
 			"msg":  "404 Not Found",
-			"hint": "you have get the no route path",
+			"tips": "you have get the no route path",
 		})
 	})
 	return r
