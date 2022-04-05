@@ -25,4 +25,11 @@ Fork项目
 
 ![image-20220405085544738](https://qiniuyun.code520.com.cn/images/image-20220405085544738.png)
 
-#### 参考链接
+### 由于把npm把发布到了@jokereven/cdn-store@0.0.1
+
+#### 这不不知到为什么就访问不了了2333
+
+#### 重新把包发布到jokereven/cdn-store
+
+![image-20220405222448062](https://qiniuyun.code520.com.cn/images/image-20220405222448062.png)
+

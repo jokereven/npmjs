@@ -1,6 +1,6 @@
 {
-  "name": "@jokereven/cdn-store",
-  "version": "0.0.1",
+  "name": "live2d-diana",
+  "version": "1.0.0",
   "description": "Loading Diana live2d Model File",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
