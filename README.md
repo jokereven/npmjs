@@ -22,6 +22,6 @@
 
 [About](https://github.com/jokereven/npmjs/tree/master/cdn)
 
-[npm@jokereven/cdn-store](https://www.npmjs.com/package/live2d-diana)
+[npm@jokereven/live2d-diana](https://www.npmjs.com/package/live2d-diana)
 
 ### [npm@~jokereven](https://www.npmjs.com/~jokereven)
