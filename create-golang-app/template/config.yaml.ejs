@@ -2,14 +2,14 @@ app:
   name: '<%= packageName %>'
   mode: 'debug'
   host: 'localhost'
-  version: 'v1.0.5'
+  version: 'v2.0.0'
   port: <%= port %>
-  start_time: '2022-1-25'
+  start_time: '2022-5-30'
   machine_id: 1
 
 log:
   level: 'debug'
-  file_name: '<%= packageName %>.log'
+  file_name: './log/<%= packageName %>.log'
   max_size: 200
   max_age: 30
   max_backups: 7
@@ -19,7 +19,7 @@ mysql:
   port: 3306
   user: 'root'
   password: 'root'
-  db_name: 'zjing'
+  db_name: 'dbname'
   max_open_conns: 200
   max_idle_conns: 20
 

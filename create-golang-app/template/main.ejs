@@ -14,8 +14,8 @@ import (
 	"github.com/<%= github %>/<%= packageName %>/dao/mysql"
 	"github.com/<%= github %>/<%= packageName %>/dao/redis"
 	"github.com/<%= github %>/<%= packageName %>/logger"
-	"github.com/<%= github %>/<%= packageName %>/route"
-	"github.com/<%= github %>/<%= packageName %>/setting"
+	"github.com/<%= github %>/<%= packageName %>/routers"
+	"github.com/<%= github %>/<%= packageName %>/settings"
 
 	"github.com/spf13/viper"
 	"go.uber.org/zap"
@@ -29,7 +29,7 @@ func main() {
 		fmt.Println("need set config file such: zjing.exe ./conf/config.yaml")
 		return
 	} */
-	
+
 	// 2. 通过flag 执行命令行
 	var filepath string
 	func() {

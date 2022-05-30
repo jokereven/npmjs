@@ -6,13 +6,12 @@ import { fileURLToPath } from 'url';
 export default config => {
 	const __dirname = fileURLToPath(import.meta.url);
 	const templateSnippet = fs.readFileSync(
-		path.resolve(__dirname, '../../template/setting.ejs')
+		path.resolve(__dirname, '../../template/routers.ejs')
 	);
 	const snippet = ejs.render(templateSnippet.toString(), {
 		packageName: config.packageName,
 		port: config.port,
 		github: config.github,
 	});
-
 	return snippet;
 };

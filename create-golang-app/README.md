@@ -79,6 +79,7 @@ v1.0.3 微调...
 v1.0.4 添加air对代码进行优化...
 v1.0.5 添加初始化时github参数.
 v1.1.0 微调...
+v2.0.0 update go version 1.16 -> 1.18 更新文件夹与文件命名
 ```
 
 
@@ -90,10 +91,14 @@ v1.1.0 微调...
 ```bash
 /conf/config.yaml
 
-mysql 默认 用户名 root 密码 root 数据库 zjing 端口 3306
+mysql 默认 用户名 root 密码 root 数据库 dbname 端口 3306
 
 redis 默认 端口 6379
 ```
+
+### 关于生成的go.mod 文文件请自行修该为自己的 go version
+
+![image-20220530110143050](https://qiniuyun.code520.com.cn/images/image-20220530110143050.png)
 
 [swagger生成接口文档](https://www.liwenzhou.com/posts/Go/gin_swagger/)
 

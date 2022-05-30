@@ -12,8 +12,8 @@ import create_main_template from './utils/create_main_template.js';
 import create_mysql_template from './utils/create_mysql_template.js';
 import create_rate_template from './utils/create_rate_template.js';
 import create_redis_template from './utils/create_redis_template.js';
-import create_route_template from './utils/create_route_template.js';
-import create_setting_template from './utils/create_setting_template.js';
+import create_route_template from './utils/create_routers_template.js';
+import create_setting_template from './utils/create_settings_template.js';
 const answer = await issue();
 console.log(answer);
 
@@ -35,6 +35,9 @@ fs.writeFileSync(
 
 // main.go
 fs.writeFileSync(`${GetRootPath()}/main.go`, create_main_template(inputConfig));
+
+// log
+fs.mkdirSync(`${GetRootPath()}/log/`);
 
 // conf
 fs.mkdirSync(`${GetRootPath()}/conf/`);
@@ -74,38 +77,40 @@ fs.writeFileSync(
 // logic
 fs.mkdirSync(`${GetRootPath()}/logic/`);
 
-// middleware
-fs.mkdirSync(`${GetRootPath()}/middleware/`);
+// middlewares
+fs.mkdirSync(`${GetRootPath()}/middlewares/`);
 
+// cors
 fs.writeFileSync(
-	`${GetRootPath()}/middleware/cors.go`,
+	`${GetRootPath()}/middlewares/cors.go`,
 	create_cors_template(inputConfig)
 );
 
+// rate
 fs.writeFileSync(
-	`${GetRootPath()}/middleware/rate.go`,
+	`${GetRootPath()}/middlewares/rate.go`,
 	create_rate_template(inputConfig)
 );
 
-// model
-fs.mkdirSync(`${GetRootPath()}/model/`);
+// models
+fs.mkdirSync(`${GetRootPath()}/models/`);
 
 // pkg
 fs.mkdirSync(`${GetRootPath()}/pkg/`);
 
-// route
-fs.mkdirSync(`${GetRootPath()}/route/`);
+// routers
+fs.mkdirSync(`${GetRootPath()}/routers/`);
 
 fs.writeFileSync(
-	`${GetRootPath()}/route/route.go`,
+	`${GetRootPath()}/routers/routers.go`,
 	create_route_template(inputConfig)
 );
 
-// setting
-fs.mkdirSync(`${GetRootPath()}/setting/`);
+// settings
+fs.mkdirSync(`${GetRootPath()}/settings/`);
 
 fs.writeFileSync(
-	`${GetRootPath()}/setting/setting.go`,
+	`${GetRootPath()}/settings/settings.go`,
 	create_setting_template(inputConfig)
 );
 
@@ -113,7 +118,7 @@ fs.writeFileSync(
 fs.mkdirSync(`${GetRootPath()}/sql/`);
 fs.writeFileSync(
 	`${GetRootPath()}/sql/init.sql`,
-	`create database if not exists zjing;`
+	`create database if not exists dbname;`
 );
 
 // .gitignore
