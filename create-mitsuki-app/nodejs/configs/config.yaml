@@ -1,0 +1,31 @@
+app:
+  name: 'mitsuki'
+  mode: 'debug'
+  host: 'localhost'
+  version: 'v0.0.1'
+  port: 8080
+  start_time: '2022-10-24'
+  machine_id: 1
+
+log:
+  level: 'debug'
+  file_name: './log/mitsuki.log'
+  max_size: 200
+  max_age: 30
+  max_backups: 7
+
+mysql:
+  host: '127.0.0.1'
+  port: 3306
+  user: 'root'
+  password: 'root'
+  db_name: 'mitsuki'
+  max_open_conns: 200
+  max_idle_conns: 20
+
+redis:
+  host: '127.0.0.1'
+  port: 6379
+  db: 0
+  password: ''
+  pool_size: 100
