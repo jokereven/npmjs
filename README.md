@@ -24,4 +24,12 @@
 
 [npm@jokereven/live2d-diana](https://www.npmjs.com/package/live2d-diana)
 
+## create-mitsuki-app
+
+> link the create-golang-app
+
+[About](https://github.com/jokereven/npmjs/tree/master/create-mitsuki-app)
+
+[npm@jokereven/create-mitsuki-app](https://www.npmjs.com/package/create-mitsuki-app)
+
 ### [npm@~jokereven](https://www.npmjs.com/~jokereven)
