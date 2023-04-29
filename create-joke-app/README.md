@@ -1,6 +1,6 @@
 # create-reducer-app
 
-创建 Redux 通用脚手架
+创建 React app (prettier and commitlint) 通用脚手架
 
 ## 使用的模块
 
@@ -26,13 +26,13 @@ v16.4.0(这里使用nvm管理node版本)
 #### 使用create-reducer-app
 
 ```bash
-cnpm i create-reducer-app -g
+cnpm i create-joke-app -g
 ```
 
-![image-20220213194043211](https://qiniuyun.code520.com.cn/images/20220213194043.png)
+create-joke-app
 
-#### redux浏览器调试插件
+yarn
 
-![image-20220213194204512](https://qiniuyun.code520.com.cn/images/20220213194204.png)
+git init
 
-![image-20220213194304122](https://qiniuyun.code520.com.cn/images/20220213194304.png)
+npx husky install
